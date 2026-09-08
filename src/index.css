@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Light Mode Theme Variables */
+    --bg-base: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-subtle: #f1f5f9;
+    --bg-elevated: #f8fafc;
+    --border-main: #cbd5e1;
+    --border-subtle: #e2e8f0;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --text-dim: #94a3b8;
+    --accent-primary: #0284c7;
+    --accent-subtle: rgba(2, 132, 199, 0.1);
+    --shadow-main: 0 4px 12px -2px rgba(15, 23, 42, 0.08);
+  }
+
+  .dark {
+    /* Dark Mode Theme Variables */
+    --bg-base: #070a12;
+    --bg-surface: #0e1526;
+    --bg-card: #0f172a;
+    --bg-card-subtle: #090d16;
+    --bg-elevated: #1e293b;
+    --border-main: #1e293b;
+    --border-subtle: #162032;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --text-dim: #64748b;
+    --accent-primary: #38bdf8;
+    --accent-subtle: rgba(56, 189, 248, 0.15);
+    --shadow-main: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Palette Specific Overrides */
+  [data-palette="slate"] {
+    --accent-primary: #6366f1;
+    --accent-subtle: rgba(99, 102, 241, 0.15);
+  }
+  .dark[data-palette="slate"] {
+    --bg-base: #080c16;
+    --bg-surface: #0e1424;
+    --accent-primary: #818cf8;
+    --accent-subtle: rgba(129, 140, 248, 0.15);
+  }
+
+  [data-palette="neon_lab"] {
+    --accent-primary: #059669;
+    --accent-subtle: rgba(5, 150, 105, 0.15);
+  }
+  .dark[data-palette="neon_lab"] {
+    --bg-base: #060b12;
+    --bg-surface: #0a131f;
+    --accent-primary: #10b981;
+    --accent-subtle: rgba(16, 185, 129, 0.15);
+  }
+
+  [data-palette="high_contrast"] {
+    --bg-base: #ffffff;
+    --bg-surface: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-subtle: #f8fafc;
+    --border-main: #0f172a;
+    --border-subtle: #334155;
+    --text-primary: #000000;
+    --text-secondary: #0f172a;
+    --accent-primary: #004085;
+  }
+  .dark[data-palette="high_contrast"] {
+    --bg-base: #000000;
+    --bg-surface: #050505;
+    --bg-card: #0a0a0a;
+    --bg-card-subtle: #121212;
+    --border-main: #475569;
+    --border-subtle: #334155;
+    --text-primary: #ffffff;
+    --text-secondary: #f1f5f9;
+    --accent-primary: #60a5fa;
+  }
+}
+
+/* Reusable Semantic Theme Classes */
+.app-bg-base {
+  background-color: var(--bg-base);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.app-bg-surface {
+  background-color: var(--bg-surface);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.app-bg-card {
+  background-color: var(--bg-card);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.app-bg-subtle {
+  background-color: var(--bg-card-subtle);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.app-border {
+  border-color: var(--border-main);
+  transition: border-color 0.2s ease;
+}
+
+.app-border-subtle {
+  border-color: var(--border-subtle);
+  transition: border-color 0.2s ease;
+}
+
+.app-text-primary {
+  color: var(--text-primary);
+}
+
+.app-text-secondary {
+  color: var(--text-secondary);
+}
+
+.app-text-muted {
+  color: var(--text-muted);
+}
+
+.app-text-dim {
+  color: var(--text-dim);
+}
+
+.app-accent {
+  color: var(--accent-primary);
+}
+

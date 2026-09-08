@@ -1,0 +1,6 @@
+{
+  "name": "Convex Lens Optics Simulator",
+  "description": "Interactive optical elements simulator with first-person visual perspectives and ray diagrams for convex/concave lenses and mirrors.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
